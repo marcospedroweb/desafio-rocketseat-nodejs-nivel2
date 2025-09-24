@@ -1,0 +1,16 @@
+{
+  "extends": "@rocketseat/eslint-config/node",
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "env": {
+    "node": true,
+    "es2021": true
+  },
+  "rules": {
+    "prettier/prettier": [
+      "off"
+    ]
+  }
+}
