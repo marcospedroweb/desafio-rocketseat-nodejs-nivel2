@@ -3,7 +3,7 @@ import { z } from "zod";
 import { knex } from "../database.js";
 import crypto from 'node:crypto'
 import bcrypt from "bcrypt";
-import type { User } from "../models/user.js";
+import type { User } from "../models/user.model.js";
 
 export async function usersRoutes(app: FastifyInstance) {
 
