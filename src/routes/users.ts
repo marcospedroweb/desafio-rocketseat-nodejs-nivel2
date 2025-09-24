@@ -4,8 +4,41 @@ import { knex } from "../database.js";
 import crypto from 'node:crypto'
 import bcrypt from "bcrypt";
 import type { User } from "../models/user.model.js";
+import { checkSessionIdExists } from "../middleware/check-session-id-exists.js";
+import type { Meal } from "../models/meal.model.js";
 
 export async function usersRoutes(app: FastifyInstance) {
+
+  app.get('/metrics', { preHandler: checkSessionIdExists }, async (request, reply) => {
+
+    const meals = await knex<Meal>('meals')
+      .where('userId', request.userId)
+      .orderBy('datetime', 'asc')
+
+    const totalMeals = meals.length
+    const withinDietMeals = meals.filter(m => m.withinDiet).length
+    const outsideDietMeals = totalMeals - withinDietMeals
+
+    let bestSequence = 0;
+    let currentSequence = 0;
+
+    for (const { withinDiet } of meals) {
+      if (withinDiet) {
+        currentSequence++
+        bestSequence = Math.max(bestSequence, currentSequence)
+      } else {
+        currentSequence = 0
+      }
+    }
+
+
+    return reply.status(200).send({
+      totalMeals,
+      withinDietMeals,
+      outsideDietMeals,
+      bestSequence,
+    })
+  })
 
   app.post('/', async (request, reply) => {
     const createUserBodySchema = z.object({

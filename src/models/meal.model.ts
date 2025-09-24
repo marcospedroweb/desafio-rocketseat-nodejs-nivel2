@@ -5,5 +5,6 @@ export interface Meal {
   description: string,
   datetime: string,
   withinDiet: boolean,
-  created_at: string,
+  createdAt: string,
+  updatedAt: string
 }
