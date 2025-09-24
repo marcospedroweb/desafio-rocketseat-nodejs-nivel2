@@ -56,7 +56,7 @@ export async function usersRoutes(app: FastifyInstance) {
         password: hash,
       })
 
-    return reply.status(201).send()
+    return reply.status(201).send({ message: 'Usuário criado com sucesso' })
   })
 
   app.post('/login', async (request, reply) => {

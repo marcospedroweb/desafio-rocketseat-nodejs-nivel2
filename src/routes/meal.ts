@@ -13,7 +13,7 @@ export async function mealRoutes(app: FastifyInstance) {
       .select('*')
 
 
-    return reply.status(201).send({ meals })
+    return reply.status(200).send({ meals })
   })
 
   app.get('/:id', { preHandler: [checkSessionIdExists] }, async (request, reply) => {

@@ -1,8 +1,7 @@
-import fastify from "fastify";
-import { knex } from "./database.js";
 import { usersRoutes } from "./routes/users.js";
 import cookie from '@fastify/cookie'
 import { mealRoutes } from "./routes/meal.js";
+import fastify from "fastify";
 
 
 export const app = fastify()
