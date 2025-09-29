@@ -1,0 +1,222 @@
+{
+	"info": {
+		"_postman_id": "328b52fb-8d12-47c5-a79a-6b66f5eaf2ad",
+		"name": "desafio2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23990932",
+		"_collection_link": "https://rockeseat.postman.co/workspace/RocketSeat-Nodejs~2218dca3-1374-4779-a110-b68ec29dd61f/collection/23990932-328b52fb-8d12-47c5-a79a-6b66f5eaf2ad?action=share&source=collection_link&creator=23990932"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"email\": \"fulano@fulano.com\",\r\n   \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"email\": \"fulano@fulano.com\",\r\n   \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Meal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Jantar\",\r\n  \"description\": \"arroz e frango\",\r\n  \"datetime\": \"2025-09-23T20:00:00.000Z\",\r\n  \"withinDiet\": false\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/meals",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"meals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Meals",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/meals",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"meals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List User Metrics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/users/metrics",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"users",
+						"metrics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Meal by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/meals/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"meals",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "4ad43e29-8a30-4020-b8f8-b69f9470f86c"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete meal",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3333/meals/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"meals",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "94199c96-d5d7-4ba5-959b-ff264cf2a625"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Meal",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Almoço rápido \",\r\n    \"description\": \"Arroz e feijão\",\r\n    \"datetime\": \"2024-09-24T12:30:00Z\",\r\n    \"withinDiet\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/meals/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"meals",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "4ad43e29-8a30-4020-b8f8-b69f9470f86c"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

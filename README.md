@@ -76,5 +76,7 @@ Neste projeto, aprofundei conceitos fundamentais de **Node.js** e **desenvolvime
 7. Inicie as tabelas do banco Knex:  
    `npm run knex -- migrate:latest`
 8. Acesse a API via `http://localhost:3333`.
+9. (Opcional) Utilize o collection para realizar Request via Postman:
+   `desafio2.postman_collection.json`
 
 ---
