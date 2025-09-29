@@ -67,10 +67,14 @@ Neste projeto, aprofundei conceitos fundamentais de **Node.js** e **desenvolvime
    `cd desafio-rocketseat-nodejs-nivel2`
 3. Instale as dependências:  
    `npm install`
-4. Inicie o servidor em modo desenvolvimento:  
-   `npm run dev`
-5. Inicie as tabelas do banco Knex:  
+4. Crie o arquivo .env com base no .env.example:  
+   `.env.example`
+5. Gere o servidor em modo produção:  
+   `npm run build`
+6. Inicie o servidor em produção:  
+   `node ./build/server.cjs`
+7. Inicie as tabelas do banco Knex:  
    `npm run knex -- migrate:latest`
-6. Acesse a API via `http://localhost:3333`.
+8. Acesse a API via `http://localhost:3333`.
 
 ---
