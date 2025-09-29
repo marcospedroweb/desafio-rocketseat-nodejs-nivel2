@@ -31,7 +31,7 @@ export async function mealRoutes(app: FastifyInstance) {
       .select('*')
       .first()
 
-    return reply.status(201).send({ meal })
+    return reply.status(200).send({ meal })
   })
 
   app.post('/', {
