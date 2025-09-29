@@ -2,7 +2,7 @@
 
 API de registro de refeições e acompanhamento de dieta desenvolvida utilizando **Node.js e Fastify**, com banco de dados **SQLite**.  
 O objetivo do projeto foi criar um backend completo para registrar refeições, calcular métricas de dieta e gerenciar usuários de forma segura.
-[test-api-desafio2.webm](https://github.com/user-attachments/assets/dc211e40-be4b-43bb-b2de-f25c03ded18c)
+https://github.com/user-attachments/assets/8ac869c4-7082-433a-8923-1e519ae199f7
 
 ## O que foi praticado e aprendido
 
